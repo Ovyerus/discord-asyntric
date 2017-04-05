@@ -12,19 +12,6 @@ $black-lvl-2 = rgba(0, 0, 0, 0.5);
 $black-lvl-3 = rgba(0, 0, 0, 0.25);
 $asyntric = #68217A;
 
-@keyframes ripple {
-     0% {
-        transform: scale(0);
-    }
-    20% {
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1);
-    }
-}
-
 /* Bot Tag*/
 .bot-tag {
     visibility: hidden;
@@ -239,21 +226,4 @@ $asyntric = #68217A;
 /* User Modal */
 #user-profile-modal {
 
-}
-
-/* Status Popout */
-.theme-dark .status-picker {
-    border-radius: 50px;
-    background: $col1;
-    width: 38px;
-    left: -50px;
-    & .popout-menu-separator {
-        display: none;
-    }
-    & .popout-menu-item {
-        & .helper,
-        & .status-icon-text .status-text {
-            display: none;
-        }
-    }
 }
