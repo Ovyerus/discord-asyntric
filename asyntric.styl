@@ -1,0 +1,259 @@
+// Variables
+$col1 = #2E2E2E;
+$online = #43B581;
+$away = #FAA61A;
+$dnd = #F04747;
+$invis = #747F8D;
+$white-lvl-1 = rgba(255, 255, 255, 0.75);
+$white-lvl-2 = rgba(255, 255, 255, 0.5);
+$white-lvl-3 = rgba(255, 255, 255, 0.25);
+$black-lvl-1 = rgba(0, 0, 0, 0.75);
+$black-lvl-2 = rgba(0, 0, 0, 0.5);
+$black-lvl-3 = rgba(0, 0, 0, 0.25);
+$asyntric = #68217A;
+
+@keyframes ripple {
+     0% {
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+/* Bot Tag*/
+.bot-tag {
+    visibility: hidden;
+    &::before {
+        visibility: visible;
+        background: #7289DA;
+        color: #FFF;
+        padding: 1px 2px;
+        border-radius: 3px;
+        content: "Service";
+    }
+}
+
+/* User Popout */
+.theme-dark .popout {
+    box-shadow: none;
+}
+
+.theme-dark .user-popout {
+    border-radius: 25px;
+    & .header,
+    & .body,
+    & .footer {
+        background: $col1;
+    }
+    & .header {
+        & .avatar-wrapper  {
+            & .avatar-popout {
+                border: none;
+                background-color: $col1;
+                width: 45px;
+                height: 45px;
+                background-size: 45px 45px;
+                margin-left: -113px;
+                margin-top: -10px;
+                transition: box-shadow 0.2s;
+                & .status {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50px;
+                    box-shadow: none;
+                    left: -113px;
+                    top: -10px;
+                    background: transparent;
+                    &.status-online {
+                        border: solid 3px $online;
+                    }
+                    &.status-idle {
+                        border: solid 3px $away;
+                    }
+                    &.status-dnd {
+                        border: solid 3px $dnd;
+                    }
+                    &.status-offline {
+                        border: solid 3px $invis;
+                    }
+                }
+                &:hover {
+                    box-shadow: inset 0 0 25px 5px #212121;
+                }
+            }
+            & .avatar-hint {
+                display: none;
+            }
+        }
+        & .username-wrapper:not(.has-nickname) {
+            & .discord-tag {
+                margin-top: -46px;
+                text-align: left;
+                padding-left: 69px;
+                & .username {
+                    color: #FFF;
+                }
+                & .discriminator {
+                    color: $white-lvl-1;
+                }
+            }
+            & .activity {
+                text-align: left;
+                margin-left: 12px;
+                margin-right: 24px;
+                margin-top: 19px;
+                visibility: hidden;
+                letter-spacing: -8px;
+                color: $white-lvl-1
+                & strong {
+                    visibility: visible;
+                    letter-spacing: 0px;
+                    &::before {
+                        content: 'Playing - ';
+                    }
+                }
+            }
+        }
+        & .username-wrapper.has-nickname {
+            & .nickname {
+                margin-top: -53px;
+                text-align: left;
+                padding-left: 69px;
+                color: #FFF;
+            }
+            & .discord-tag {
+                text-align: left;
+                padding-left: 69px;
+                margin-top: -10px;
+                & .username {
+                    color: $white-lvl-1;
+                }
+                & .discriminator {
+                    color: $white-lvl-2
+                }
+            }
+            & .activity {
+                text-align: left;
+                margin-left: 12px;
+                margin-right: 24px;
+                margin-top: 6px;
+                visibility: hidden;
+                letter-spacing: -8px;
+                color: $white-lvl-1
+                & strong {
+                    visibility: visible;
+                    letter-spacing: 0px;
+                    &::before {
+                        content: 'Playing - ';
+                    }
+                }
+            }
+        }
+    }
+    & .body {
+        & .notes {
+            & .label {
+                & .icon {
+                    display: none;
+                }
+                color: #FFF;
+            }
+        }
+        & .note textarea {
+            color: $white-lvl-2;
+            transition: background 0.2s, color 0.2s;
+            &:focus {
+                background: $black-lvl-2;
+                color: #FFF;
+                &::-webkit-input-placeholder {
+                    color: $white-lvl-1
+                }
+            }
+            &::-webkit-input-placeholder {
+                color: $white-lvl-2;
+                transition: color 0.2s;
+            }
+        }
+    }
+    & .footer {
+        border: none;
+        & .quick-message-wrapper .quick-message {
+            background: $black-lvl-3;
+            border: none;
+            border-radius: 50px;
+            color: $white-lvl-2;
+            transition: background 0.2s, color 0.2s;
+            &:focus {
+                background: $black-lvl-2;
+                color: #FFF;
+                &::-webkit-input-placeholder {
+                    color: $white-lvl-1
+                }
+            }
+            &::-webkit-input-placeholder {
+                color: $white-lvl-2;
+                transition: color 0.2s;
+            }
+        }
+    }
+}
+
+/* Asyntric Badge */
+.avatar-large[style*="99742488666845184"] + .comment .message.first .body .username-wrapper:after {
+	content: 'Asyntric';
+	color: white;
+	margin-left: 5px;
+	background: $asyntric;
+    line-height: 16px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    border-radius: 3px;
+    margin-left: 6px;
+    padding: 1px 2px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: text;
+}
+
+.member.member-status > .avatar-small[style*="99742488666845184"] + .member-inner .member-username:after {
+	content: 'Asyntric';
+	color: white;
+	margin-left: 5px;
+	background: $asyntric;
+    line-height: 15px;
+    height: 14px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    border-radius: 3px;
+    margin-left: 6px;
+    padding: 1px 2px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* User Modal */
+#user-profile-modal {
+
+}
+
+/* Status Popout */
+.theme-dark .status-picker {
+    border-radius: 50px;
+    background: $col1;
+    width: 38px;
+    left: -50px;
+    & .popout-menu-separator {
+        display: none;
+    }
+    & .popout-menu-item {
+        & .helper,
+        & .status-icon-text .status-text {
+            display: none;
+        }
+    }
+}

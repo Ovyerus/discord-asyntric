@@ -1,0 +1,257 @@
+/* Bot Tag*/
+.bot-tag {
+  visibility: hidden;
+}
+.bot-tag::before {
+  visibility: visible;
+  background: #7289da;
+  color: #fff;
+  padding: 1px 2px;
+  border-radius: 3px;
+  content: "Service";
+}
+/* User Popout */
+.theme-dark .popout {
+  box-shadow: none;
+}
+.theme-dark .user-popout {
+  border-radius: 25px;
+}
+.theme-dark .user-popout .header,
+.theme-dark .user-popout .body,
+.theme-dark .user-popout .footer {
+  background: #2e2e2e;
+}
+.theme-dark .user-popout .header .avatar-wrapper .avatar-popout {
+  border: none;
+  background-color: #2e2e2e;
+  width: 45px;
+  height: 45px;
+  background-size: 45px 45px;
+  margin-left: -113px;
+  margin-top: -10px;
+  transition: box-shadow 0.2s;
+}
+.theme-dark .user-popout .header .avatar-wrapper .avatar-popout .status {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  box-shadow: none;
+  left: -113px;
+  top: -10px;
+  background: transparent;
+}
+.theme-dark .user-popout .header .avatar-wrapper .avatar-popout .status.status-online {
+  border: solid 3px #43b581;
+}
+.theme-dark .user-popout .header .avatar-wrapper .avatar-popout .status.status-idle {
+  border: solid 3px #faa61a;
+}
+.theme-dark .user-popout .header .avatar-wrapper .avatar-popout .status.status-dnd {
+  border: solid 3px #f04747;
+}
+.theme-dark .user-popout .header .avatar-wrapper .avatar-popout .status.status-offline {
+  border: solid 3px #747f8d;
+}
+.theme-dark .user-popout .header .avatar-wrapper .avatar-popout:hover {
+  box-shadow: inset 0 0 25px 5px #212121;
+}
+.theme-dark .user-popout .header .avatar-wrapper .avatar-hint {
+  display: none;
+}
+.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .discord-tag {
+  margin-top: -46px;
+  text-align: left;
+  padding-left: 69px;
+}
+.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .discord-tag .username {
+  color: #fff;
+}
+.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .discord-tag .discriminator {
+  color: rgba(255,255,255,0.75);
+}
+.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .activity {
+  text-align: left;
+  margin-left: 12px;
+  margin-right: 24px;
+  margin-top: 19px;
+  visibility: hidden;
+  letter-spacing: -8px;
+  color: rgba(255,255,255,0.75);
+}
+.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .activity strong {
+  visibility: visible;
+  letter-spacing: 0px;
+}
+.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .activity strong::before {
+  content: 'Playing - ';
+}
+.theme-dark .user-popout .header .username-wrapper.has-nickname .nickname {
+  margin-top: -53px;
+  text-align: left;
+  padding-left: 69px;
+  color: #fff;
+}
+.theme-dark .user-popout .header .username-wrapper.has-nickname .discord-tag {
+  text-align: left;
+  padding-left: 69px;
+  margin-top: -10px;
+}
+.theme-dark .user-popout .header .username-wrapper.has-nickname .discord-tag .username {
+  color: rgba(255,255,255,0.75);
+}
+.theme-dark .user-popout .header .username-wrapper.has-nickname .discord-tag .discriminator {
+  color: rgba(255,255,255,0.5);
+}
+.theme-dark .user-popout .header .username-wrapper.has-nickname .activity {
+  text-align: left;
+  margin-left: 12px;
+  margin-right: 24px;
+  margin-top: 6px;
+  visibility: hidden;
+  letter-spacing: -8px;
+  color: rgba(255,255,255,0.75);
+}
+.theme-dark .user-popout .header .username-wrapper.has-nickname .activity strong {
+  visibility: visible;
+  letter-spacing: 0px;
+}
+.theme-dark .user-popout .header .username-wrapper.has-nickname .activity strong::before {
+  content: 'Playing - ';
+}
+.theme-dark .user-popout .body .notes .label {
+  color: #fff;
+}
+.theme-dark .user-popout .body .notes .label .icon {
+  display: none;
+}
+.theme-dark .user-popout .body .note textarea {
+  color: rgba(255,255,255,0.5);
+  transition: background 0.2s, color 0.2s;
+}
+.theme-dark .user-popout .body .note textarea:focus {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+.theme-dark .user-popout .body .note textarea:focus::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.75);
+}
+.theme-dark .user-popout .body .note textarea::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+.theme-dark .user-popout .footer {
+  border: none;
+}
+.theme-dark .user-popout .footer .quick-message-wrapper .quick-message {
+  background: rgba(0,0,0,0.25);
+  border: none;
+  border-radius: 50px;
+  color: rgba(255,255,255,0.5);
+  transition: background 0.2s, color 0.2s;
+}
+.theme-dark .user-popout .footer .quick-message-wrapper .quick-message:focus {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+.theme-dark .user-popout .footer .quick-message-wrapper .quick-message:focus::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.75);
+}
+.theme-dark .user-popout .footer .quick-message-wrapper .quick-message::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+/* Asyntric Badge */
+.avatar-large[style*="99742488666845184"] + .comment .message.first .body .username-wrapper:after {
+  content: 'Asyntric';
+  color: #fff;
+  margin-left: 5px;
+  background: #68217a;
+  line-height: 16px;
+  text-transform: uppercase;
+  vertical-align: bottom;
+  border-radius: 3px;
+  margin-left: 6px;
+  padding: 1px 2px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: text;
+}
+.member.member-status > .avatar-small[style*="99742488666845184"] + .member-inner .member-username:after {
+  content: 'Asyntric';
+  color: #fff;
+  margin-left: 5px;
+  background: #68217a;
+  line-height: 15px;
+  height: 14px;
+  text-transform: uppercase;
+  vertical-align: bottom;
+  border-radius: 3px;
+  margin-left: 6px;
+  padding: 1px 2px;
+  font-size: 10px;
+  font-weight: 600;
+}
+/* User Modal */
+/* Status Popout */
+.theme-dark .status-picker {
+  border-radius: 50px;
+  background: #2e2e2e;
+  width: 38px;
+  left: -50px;
+}
+.theme-dark .status-picker .popout-menu-separator {
+  display: none;
+}
+.theme-dark .status-picker .popout-menu-item .helper,
+.theme-dark .status-picker .popout-menu-item .status-icon-text .status-text {
+  display: none;
+}
+@-moz-keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@-o-keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
