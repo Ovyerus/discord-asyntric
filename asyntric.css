@@ -219,13 +219,26 @@
 #user-profile-modal .header .header-info .header-info-inner .activity {
   color: rgba(255,255,255,0.75);
 }
-#user-profile-modal .header .header-info .profile-badge.badge-partner ~ .header-info-inner {
-  margin-left: -50px;
-  margin-bottom: -3px;
-}
 #user-profile-modal .header .header-info .profile-badge.badge-partner {
   margin-bottom: -105px;
   margin-left: -187px;
+}
+#user-profile-modal .header .header-info .profile-badge.badge-premium,
+#user-profile-modal .header .header-info .profile-badge.badge-staff {
+  margin-bottom: -85px;
+  margin-left: -187px;
+}
+#user-profile-modal .header .header-info .profile-badge ~ .header-info-inner {
+  margin-left: -50px;
+  margin-bottom: -3px;
+}
+#user-profile-modal .header .header-info .profile-badge.badge-premium ~ .header-info-inner {
+  margin-left: -50px;
+  margin-bottom: -3px;
+}
+#user-profile-modal .header .header-info .profile-badge.badge-staff ~ .header-info-inner {
+  margin-left: -40px;
+  margin-botton: -3px;
 }
 #user-profile-modal .header .actions button {
   margin-left: -21px;

@@ -251,13 +251,26 @@ $menu-arrow = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/ico
                     color: $white-lvl-1;
                 }
             }
-            & .profile-badge.badge-partner ~ .header-info-inner {
-                margin-left: -50px;
-                margin-bottom: -3px;
-            }
             & .profile-badge.badge-partner {
                 margin-bottom: -105px;
                 margin-left: -187px;
+            }
+            & .profile-badge.badge-premium,
+            & .profile-badge.badge-staff {
+                margin-bottom: -85px;
+                margin-left: -187px;
+            }
+            & .profile-badge ~ .header-info-inner {
+                margin-left: -50px;
+                margin-bottom: -3px;
+            }
+            & .profile-badge.badge-premium ~ .header-info-inner {
+                margin-left: -50px;
+                margin-bottom: -3px;
+            }
+            & .profile-badge.badge-staff ~ .header-info-inner {
+                margin-left: -40px;
+                margin-botton: -3px;
             }
         }
         & .actions button {
