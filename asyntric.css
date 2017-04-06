@@ -346,3 +346,6 @@
 #user-profile-modal .guilds .section .section-header {
   color: #fff;
 }
+#user-profile-modal .guilds::-webkit-scrollbar {
+  display: none;
+}
