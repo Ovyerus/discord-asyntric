@@ -1,3 +1,30 @@
+.textarea-style,
+.theme-dark .user-popout .body .note textarea,
+.theme-dark .user-popout .footer .quick-message-wrapper .quick-message,
+#user-profile-modal .guilds .section .note textarea {
+  color: rgba(255,255,255,0.5);
+  transition: background 0.2s, color 0.2s;
+}
+.textarea-style:focus,
+.theme-dark .user-popout .body .note textarea:focus,
+.theme-dark .user-popout .footer .quick-message-wrapper .quick-message:focus,
+#user-profile-modal .guilds .section .note textarea:focus {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+.textarea-style:focus::-webkit-input-placeholder,
+.theme-dark .user-popout .body .note textarea:focus::-webkit-input-placeholder,
+.theme-dark .user-popout .footer .quick-message-wrapper .quick-message:focus::-webkit-input-placeholder,
+#user-profile-modal .guilds .section .note textarea:focus::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.75);
+}
+.textarea-style::-webkit-input-placeholder,
+.theme-dark .user-popout .body .note textarea::-webkit-input-placeholder,
+.theme-dark .user-popout .footer .quick-message-wrapper .quick-message::-webkit-input-placeholder,
+#user-profile-modal .guilds .section .note textarea::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
 /* Bot Tag*/
 .bot-tag {
   visibility: hidden;
@@ -125,21 +152,6 @@
 .theme-dark .user-popout .body .notes .label .icon {
   display: none;
 }
-.theme-dark .user-popout .body .note textarea {
-  color: rgba(255,255,255,0.5);
-  transition: background 0.2s, color 0.2s;
-}
-.theme-dark .user-popout .body .note textarea:focus {
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-}
-.theme-dark .user-popout .body .note textarea:focus::-webkit-input-placeholder {
-  color: rgba(255,255,255,0.75);
-}
-.theme-dark .user-popout .body .note textarea::-webkit-input-placeholder {
-  color: rgba(255,255,255,0.5);
-  transition: color 0.2s;
-}
 .theme-dark .user-popout .footer {
   border: none;
 }
@@ -147,19 +159,9 @@
   background: rgba(0,0,0,0.25);
   border: none;
   border-radius: 50px;
-  color: rgba(255,255,255,0.5);
-  transition: background 0.2s, color 0.2s;
 }
-.theme-dark .user-popout .footer .quick-message-wrapper .quick-message:focus {
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-}
-.theme-dark .user-popout .footer .quick-message-wrapper .quick-message:focus::-webkit-input-placeholder {
-  color: rgba(255,255,255,0.75);
-}
-.theme-dark .user-popout .footer .quick-message-wrapper .quick-message::-webkit-input-placeholder {
-  color: rgba(255,255,255,0.5);
-  transition: color 0.2s;
+.theme-dark .user-popout .footer .update-notice {
+  display: none;
 }
 /* Asyntric Badge */
 .avatar-large[style*="99742488666845184"] + .comment .message.first .body .username-wrapper:after {
@@ -192,4 +194,155 @@
   font-size: 10px;
   font-weight: 600;
 }
-/* User Modal */
+/* Profile Modal */
+#user-profile-modal {
+  border-radius: 50px;
+}
+#user-profile-modal .header,
+#user-profile-modal .header::after,
+#user-profile-modal .tab-bar-container,
+#user-profile-modal .scroller-wrap .guilds,
+#user-profile-modal .empty,
+#user-profile-modal .avatar-wrapper {
+  background: #2e2e2e;
+}
+#user-profile-modal .header .header-info .header-info-inner {
+  margin-left: -187px;
+  margin-bottom: -3px;
+}
+#user-profile-modal .header .header-info .header-info-inner .discord-tag .username {
+  color: #fff;
+}
+#user-profile-modal .header .header-info .header-info-inner .discord-tag .discriminator {
+  color: rgba(255,255,255,0.75);
+}
+#user-profile-modal .header .header-info .header-info-inner .activity {
+  color: rgba(255,255,255,0.75);
+}
+#user-profile-modal .header .header-info .profile-badge.badge-partner ~ .header-info-inner {
+  margin-left: -50px;
+  margin-bottom: -3px;
+}
+#user-profile-modal .header .header-info .profile-badge.badge-partner {
+  margin-bottom: -105px;
+  margin-left: -187px;
+}
+#user-profile-modal .header .actions button {
+  margin-left: -21px;
+  position: absolute;
+  top: 0;
+  border-radius: 0 0 10px 10px;
+  transition: background 0.2s, border-radius 0.2s, top 0.375s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#user-profile-modal .header .actions button.add-friend {
+  background: #4087ed;
+}
+#user-profile-modal .header .actions button.add-friend:hover {
+  background: #609bf0;
+}
+#user-profile-modal .header .actions button.disabled {
+  border-radius: 10px 10px 0 0;
+  opacity: 1;
+  background: #232323;
+  color: #fff;
+  border: none;
+  top: 516px;
+}
+#user-profile-modal .header .actions button.disabled:hover {
+  background: #171717;
+}
+#user-profile-modal .header .additional-actions-icon {
+  background-image: url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/menu-down.svg");
+  background-size: 150%;
+  padding: 0;
+  right: 28px;
+  top: 28px;
+  border-radius: 50px;
+  filter: invert();
+  opacity: 0.5;
+  transition: transform 0.2s, opacity 0.2s;
+}
+#user-profile-modal .header .additional-actions-icon:hover {
+  opacity: 0.75;
+}
+#user-profile-modal .header .additional-actions-icon.popout-open {
+  opacity: 1;
+  transform: rotateZ(-90deg);
+}
+#user-profile-modal .tab-bar-container {
+  border: none;
+}
+#user-profile-modal .tab-bar-container .tab-bar.TOP {
+  margin-left: -185px;
+}
+#user-profile-modal .tab-bar-container .tab-bar.TOP .tab-bar-item {
+  color: rgba(255,255,255,0.5);
+  border: none;
+  transition: color 0.2s;
+}
+#user-profile-modal .tab-bar-container .tab-bar.TOP .tab-bar-item:hover {
+  color: rgba(255,255,255,0.75);
+}
+#user-profile-modal .tab-bar-container .tab-bar.TOP .tab-bar-item.selected {
+  color: #fff;
+  background-image: linear-gradient(to top, #fff 5%, transparent 10%);
+}
+#user-profile-modal .avatar-wrapper {
+  left: 0;
+  top: 28px;
+  margin-left: 356px;
+}
+#user-profile-modal .avatar-wrapper .avatar-profile .status {
+  height: 128px;
+  width: 128px;
+  border: none;
+  left: 0px;
+  top: 0px;
+  background: transparent;
+}
+#user-profile-modal .avatar-wrapper .avatar-profile .status.status-online {
+  border: solid 5px #43b581;
+}
+#user-profile-modal .avatar-wrapper .avatar-profile .status.status-idle {
+  border: solid 5px #faa61a;
+}
+#user-profile-modal .avatar-wrapper .avatar-profile .status.status-dnd {
+  border: solid 5px #f04747;
+}
+#user-profile-modal .avatar-wrapper .avatar-profile .status.status-offline {
+  border: solid 5px #747f8d;
+}
+#user-profile-modal .guilds .section {
+  border: none !important;
+}
+#user-profile-modal .guilds .section .connected-accounts .connected-account {
+  border-radius: 50px;
+  border: none;
+  background: rgba(0,0,0,0.25);
+}
+#user-profile-modal .guilds .section .connected-accounts .connected-account .connected-account-name-inner .connected-account-name {
+  color: #fff;
+}
+#user-profile-modal .guilds .section .connected-accounts .connected-account .connected-account-name-inner .connected-account-verified-icon {
+  background-image: url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/checkbox-marked-circle-outline.svg");
+  filter: invert();
+  background-size: 16px 16px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+#user-profile-modal .guilds .section .connected-accounts .connected-account .connected-account-name-inner .connected-account-verified-icon:hover {
+  opacity: 1;
+}
+#user-profile-modal .guilds .section .connected-accounts .connected-account a .connected-account-open-icon {
+  background-image: url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/link.svg");
+  filter: invert();
+  background-size: 125%;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+#user-profile-modal .guilds .section .connected-accounts .connected-account a .connected-account-open-icon:hover {
+  opacity: 1;
+}
+#user-profile-modal .guilds .section .section-header {
+  color: #fff;
+}

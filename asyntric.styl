@@ -4,6 +4,8 @@ $online = #43B581;
 $away = #FAA61A;
 $dnd = #F04747;
 $invis = #747F8D;
+$blue = #4087ED;
+$blue-hover = #609BF0;
 $white-lvl-1 = rgba(255, 255, 255, 0.75);
 $white-lvl-2 = rgba(255, 255, 255, 0.5);
 $white-lvl-3 = rgba(255, 255, 255, 0.25);
@@ -11,6 +13,25 @@ $black-lvl-1 = rgba(0, 0, 0, 0.75);
 $black-lvl-2 = rgba(0, 0, 0, 0.5);
 $black-lvl-3 = rgba(0, 0, 0, 0.25);
 $asyntric = #68217A;
+$verified-icon = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/checkbox-marked-circle-outline.svg");
+$link = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/link.svg");
+$menu-arrow = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/menu-down.svg");
+
+.textarea-style {
+    color: $white-lvl-2;
+    transition: background 0.2s, color 0.2s;
+    &:focus {
+        background: $black-lvl-2;
+        color: #FFF;
+        &::-webkit-input-placeholder {
+            color: $white-lvl-1
+        }
+    }
+    &::-webkit-input-placeholder {
+        color: $white-lvl-2;
+        transition: color 0.2s;
+    }
+}
 
 /* Bot Tag*/
 .bot-tag {
@@ -152,40 +173,19 @@ $asyntric = #68217A;
             }
         }
         & .note textarea {
-            color: $white-lvl-2;
-            transition: background 0.2s, color 0.2s;
-            &:focus {
-                background: $black-lvl-2;
-                color: #FFF;
-                &::-webkit-input-placeholder {
-                    color: $white-lvl-1
-                }
-            }
-            &::-webkit-input-placeholder {
-                color: $white-lvl-2;
-                transition: color 0.2s;
-            }
+            @extends .textarea-style;
         }
     }
     & .footer {
         border: none;
         & .quick-message-wrapper .quick-message {
+            @extends .textarea-style;
             background: $black-lvl-3;
             border: none;
             border-radius: 50px;
-            color: $white-lvl-2;
-            transition: background 0.2s, color 0.2s;
-            &:focus {
-                background: $black-lvl-2;
-                color: #FFF;
-                &::-webkit-input-placeholder {
-                    color: $white-lvl-1
-                }
-            }
-            &::-webkit-input-placeholder {
-                color: $white-lvl-2;
-                transition: color 0.2s;
-            }
+        }
+        & .update-notice {
+            display: none;
         }
     }
 }
@@ -223,7 +223,168 @@ $asyntric = #68217A;
     font-weight: 600;
 }
 
-/* User Modal */
+/* Profile Modal */
 #user-profile-modal {
-
+    border-radius: 50px;
+    & .header,
+    & .header::after,
+    & .tab-bar-container,
+    & .scroller-wrap .guilds,
+    & .empty,
+    & .avatar-wrapper {
+        background: $col1;
+    }
+    & .header {
+        & .header-info {
+            & .header-info-inner {
+                margin-left: -187px;
+                margin-bottom: -3px;
+                & .discord-tag {
+                    & .username {
+                        color: #FFF;
+                    }
+                    & .discriminator {
+                        color: $white-lvl-1;
+                    }
+                }
+                & .activity {
+                    color: $white-lvl-1;
+                }
+            }
+            & .profile-badge.badge-partner ~ .header-info-inner {
+                margin-left: -50px;
+                margin-bottom: -3px;
+            }
+            & .profile-badge.badge-partner {
+                margin-bottom: -105px;
+                margin-left: -187px;
+            }
+        }
+        & .actions button {
+            margin-left: -21px;
+            position: absolute;
+            top: 0;
+            border-radius: 0 0 10px 10px;
+            transition: background 0.2s, border-radius 0.2s, top 0.375s cubic-bezier(0.4, 0.0, 0.2, 1);;
+            &.add-friend {
+                background: $blue;
+                &:hover {
+                    background: $blue-hover;
+                }
+            }
+            &.disabled {
+                border-radius: 10px 10px 0 0;
+                opacity: 1;
+                background: #232323;
+                color: #FFF;
+                border: none;
+                top: 516px;
+                &:hover {
+                    background: #171717;
+                }
+            }
+        }
+        & .additional-actions-icon {
+            background-image: $menu-arrow;
+            background-size: 150%;
+            padding: 0;
+            right: 28px;
+            top: 28px;
+            border-radius: 50px;
+            filter: invert();
+            opacity: 0.5;
+            transition: transform 0.2s, opacity 0.2s;
+            &:hover {
+                opacity: 0.75;
+            }
+            &.popout-open {
+                opacity: 1;
+                transform: rotateZ(-90deg);
+            }
+        }
+    }
+    & .tab-bar-container {
+        border: none;
+        & .tab-bar.TOP {
+            margin-left: -185px;
+            & .tab-bar-item {
+                color: $white-lvl-2;
+                border: none;
+                transition: color 0.2s;
+                &:hover {
+                    color: $white-lvl-1;
+                }
+                &.selected {
+                    color: #FFF;
+                    background-image: linear-gradient(to top, #FFF 5%, transparent 10%);
+                }
+            }
+        }
+    }
+    & .avatar-wrapper {
+        left: 0;
+        top: 28px;
+        margin-left: 356px;
+        & .avatar-profile .status {
+            height: 128px;
+            width: 128px;
+            border: none;
+            left: 0px;
+            top: 0px;
+            background: transparent;
+            &.status-online {
+                border: solid 5px $online;
+            }
+            &.status-idle {
+                border: solid 5px $away;
+            }
+            &.status-dnd {
+                border: solid 5px $dnd;
+            }
+            &.status-offline {
+                border: solid 5px $invis;
+            }
+        }
+    }
+    & .guilds {
+        & .section {
+            border: none !important;
+            & .connected-accounts .connected-account {
+                border-radius: 50px;
+                border: none;
+                background: $black-lvl-3;
+                & .connected-account-name-inner {
+                    & .connected-account-name {
+                        color: #FFF;
+                    }
+                    & .connected-account-verified-icon {
+                        background-image: $verified-icon;
+                        filter: invert();
+                        background-size: 16px 16px;
+                        opacity: 0.5;
+                        transition: opacity 0.2s;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+                & a .connected-account-open-icon {
+                    background-image: $link;
+                    filter: invert();
+                    background-size: 125%;
+                    opacity: 0.5;
+                    transition: opacity 0.2s;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+            & .section-header {
+                color: #FFF;
+            }
+            & .note textarea {
+                @extends .textarea-style;
+            }
+        }
+    }
 }
