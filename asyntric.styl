@@ -386,7 +386,40 @@ $menu-arrow = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/ico
                 @extends .textarea-style;
             }
         }
-        // Scrollbar
+        & .guild {
+            transition: background 0.2s, color 0.2s, padding 0.2s;
+            & .guild-inner {
+                & .guild-name {
+                    color: $white-lvl-2;
+                    transition: color 0.2s;
+                    & .disciminator {
+                        opacity: 1;
+                        color: $white-lvl-2;
+                        transition: color 0.2s;
+                    }
+                }
+                & .guild-nick {
+                    color: $white-lvl-3;
+                    transition: color 0.2s;
+                }
+            }
+            &:hover {
+                background: $white-lvl-3;
+                padding-left: 28px;
+                & .guild-inner {
+                    & .guild-name {
+                        color: #FFF;
+                        & .discriminator {
+                            opacity: 1;
+                            color: $white-lvl-1;
+                        }
+                    }
+                    & .guild-nick {
+                        color: $white-lvl-1;
+                    }
+                }
+            }
+        }
         &::-webkit-scrollbar {
             display: none;
         }

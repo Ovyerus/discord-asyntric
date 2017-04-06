@@ -346,6 +346,36 @@
 #user-profile-modal .guilds .section .section-header {
   color: #fff;
 }
+#user-profile-modal .guilds .guild {
+  transition: background 0.2s, color 0.2s, padding 0.2s;
+}
+#user-profile-modal .guilds .guild .guild-inner .guild-name {
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+#user-profile-modal .guilds .guild .guild-inner .guild-name .disciminator {
+  opacity: 1;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+#user-profile-modal .guilds .guild .guild-inner .guild-nick {
+  color: rgba(255,255,255,0.25);
+  transition: color 0.2s;
+}
+#user-profile-modal .guilds .guild:hover {
+  background: rgba(255,255,255,0.25);
+  padding-left: 28px;
+}
+#user-profile-modal .guilds .guild:hover .guild-inner .guild-name {
+  color: #fff;
+}
+#user-profile-modal .guilds .guild:hover .guild-inner .guild-name .discriminator {
+  opacity: 1;
+  color: rgba(255,255,255,0.75);
+}
+#user-profile-modal .guilds .guild:hover .guild-inner .guild-nick {
+  color: rgba(255,255,255,0.75);
+}
 #user-profile-modal .guilds::-webkit-scrollbar {
   display: none;
 }
