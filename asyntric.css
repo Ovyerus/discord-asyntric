@@ -1,25 +1,21 @@
-.textarea-style,
-.theme-dark .user-popout .body .note textarea,
+.theme-dark .user-popout .body .notes .note textarea,
 .theme-dark .user-popout .footer .quick-message-wrapper .quick-message,
 #user-profile-modal .guilds .section .note textarea {
   color: rgba(255,255,255,0.5);
   transition: background 0.2s, color 0.2s;
 }
-.textarea-style:focus,
-.theme-dark .user-popout .body .note textarea:focus,
+.theme-dark .user-popout .body .notes .note textarea:focus,
 .theme-dark .user-popout .footer .quick-message-wrapper .quick-message:focus,
 #user-profile-modal .guilds .section .note textarea:focus {
   background: rgba(0,0,0,0.5);
   color: #fff;
 }
-.textarea-style:focus::-webkit-input-placeholder,
-.theme-dark .user-popout .body .note textarea:focus::-webkit-input-placeholder,
+.theme-dark .user-popout .body .notes .note textarea:focus::-webkit-input-placeholder,
 .theme-dark .user-popout .footer .quick-message-wrapper .quick-message:focus::-webkit-input-placeholder,
 #user-profile-modal .guilds .section .note textarea:focus::-webkit-input-placeholder {
   color: rgba(255,255,255,0.75);
 }
-.textarea-style::-webkit-input-placeholder,
-.theme-dark .user-popout .body .note textarea::-webkit-input-placeholder,
+.theme-dark .user-popout .body .notes .note textarea::-webkit-input-placeholder,
 .theme-dark .user-popout .footer .quick-message-wrapper .quick-message::-webkit-input-placeholder,
 #user-profile-modal .guilds .section .note textarea::-webkit-input-placeholder {
   color: rgba(255,255,255,0.5);
@@ -151,6 +147,29 @@
 }
 .theme-dark .user-popout .body .notes .label .icon {
   display: none;
+}
+.theme-dark .user-popout .body .roles .label {
+  color: #fff;
+}
+.theme-dark .user-popout .body .roles .label .icon {
+  display: none;
+}
+.theme-dark .user-popout .body .roles .member-roles .member-role:not(.member-role-add) {
+  background: #232323;
+  border: none !important;
+  border-radius: 50px;
+  color: #fff;
+}
+.theme-dark .user-popout .body .roles .member-roles .member-role:not(.member-role-add) button {
+  filter: brightness(200%);
+}
+.theme-dark .user-popout .body .roles .member-roles .member-role.member-role-add {
+  background: #232323;
+  border: none;
+  border-radius: 50px;
+}
+.theme-dark .user-popout .body .roles .member-roles .member-role.member-role-add button {
+  filter: brightness(200%);
 }
 .theme-dark .user-popout .footer {
   border: none;

@@ -17,7 +17,7 @@ $verified-icon = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/
 $link = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/link.svg");
 $menu-arrow = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/menu-down.svg");
 
-.textarea-style {
+$textarea {
     color: $white-lvl-2;
     transition: background 0.2s, color 0.2s;
     &:focus {
@@ -166,20 +166,47 @@ $menu-arrow = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/ico
     & .body {
         & .notes {
             & .label {
+                color: #FFF;
                 & .icon {
                     display: none;
                 }
-                color: #FFF;
+            }
+            & .note textarea {
+                @extends $textarea;
             }
         }
-        & .note textarea {
-            @extends .textarea-style;
+        & .roles {
+            & .label {
+                color: #FFF;
+                & .icon {
+                    display: none;
+                }
+            }
+            & .member-roles {
+                & .member-role:not(.member-role-add) {
+                    background: #232323;
+                    border: none !important;
+                    border-radius: 50px;
+                    color: #FFF;
+                    & button {
+                        filter: brightness(200%);
+                    }
+                }
+                & .member-role.member-role-add {
+                    background: #232323;
+                    border: none;
+                    border-radius: 50px;
+                    & button {
+                        filter: brightness(200%);
+                    }
+                }
+            }
         }
     }
     & .footer {
         border: none;
         & .quick-message-wrapper .quick-message {
-            @extends .textarea-style;
+            @extends $textarea;
             background: $black-lvl-3;
             border: none;
             border-radius: 50px;
@@ -396,7 +423,7 @@ $menu-arrow = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/ico
                 color: #FFF;
             }
             & .note textarea {
-                @extends .textarea-style;
+                @extends $textarea;
             }
         }
         & .guild {
