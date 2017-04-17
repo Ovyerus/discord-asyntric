@@ -26,18 +26,6 @@
   color: rgba(255,255,255,0.5);
   transition: color 0.2s;
 }
-/* Bot Tag*/
-.bot-tag {
-  visibility: hidden;
-}
-.bot-tag::before {
-  visibility: visible;
-  background: #7289da;
-  color: #fff;
-  padding: 1px 2px;
-  border-radius: 3px;
-  content: "Service";
-}
 /* User Popout */
 .theme-dark .popout {
   box-shadow: none;
