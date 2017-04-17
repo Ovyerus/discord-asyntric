@@ -456,6 +456,28 @@
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed * {
   font-family: Muli;
 }
+.chat .content div:nth-child(1) form {
+  border: none;
+  box-shadow: none;
+  margin: 7px 10px 15px;
+}
+.chat .content div:nth-child(1) form .channel-textarea {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.chat .content div:nth-child(1) form .channel-textarea .channel-textarea-inner {
+  border-radius: 50px;
+  background: #282b30;
+  border: none;
+}
 .chat .content div:nth-child(1) form .channel-textarea .channel-textarea-inner textarea {
   font-family: Muli;
+}
+.chat .content div:nth-child(1) form .channel-textarea .channel-textarea-inner .channel-textarea-upload {
+  border: none;
+}
+.chat .content div:nth-child(1) form .typing {
+  display: none;
+  position: absolute;
+  top: 0;
 }

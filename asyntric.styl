@@ -523,8 +523,30 @@ $textarea {
                 }
             }
         }
-        & form .channel-textarea .channel-textarea-inner textarea {
-            font-family: Muli;
+        & form {
+            border: none;
+            box-shadow: none;
+            margin: 7px 10px 15px;
+            & .channel-textarea {
+                margin-top: 10px;
+                margin-bottom: 0;
+                & .channel-textarea-inner {
+                    border-radius: 50px;
+                    background: #282B30;
+                    border: none;
+                    & textarea {
+                        font-family: Muli;
+                    }
+                    & .channel-textarea-upload {
+                        border: none;
+                    }
+                }
+            }
+            & .typing {
+                display: none;
+                position: absolute;
+                top: 0;
+            }
         }
     }
 }
