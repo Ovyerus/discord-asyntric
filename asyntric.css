@@ -448,6 +448,9 @@
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed * {
   font-family: Muli;
 }
+.chat .content div:nth-child(1) .messages-wrapper .messages .edit-message .edit-container-outer .edit-container-inner .channel-textarea .channel-textarea-inner textarea {
+  font-family: Muli;
+}
 .chat .content div:nth-child(1) form {
   border: none;
   box-shadow: none;
