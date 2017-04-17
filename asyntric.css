@@ -452,7 +452,8 @@
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup *,
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-content .embed-content-inner *,
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-footer,
-.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-inner * {
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-inner *,
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed * {
   font-family: Muli;
 }
 .chat .content div:nth-child(1) form .channel-textarea .channel-textarea-inner textarea {
