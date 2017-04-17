@@ -453,7 +453,8 @@
   font-family: Muli;
 }
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-content .embed-content-inner *,
-.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-footer {
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-footer,
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-inner * {
   font-family: Muli;
 }
 .chat .content div:nth-child(1) form .channel-textarea .channel-textarea-inner textarea {
