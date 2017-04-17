@@ -272,10 +272,10 @@
   transition: background 0.2s, border-radius 0.2s, top 0.375s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #user-profile-modal .header .actions button.add-friend {
-  background: #4087ed;
+  background: #7289da;
 }
 #user-profile-modal .header .actions button.add-friend:hover {
-  background: #609bf0;
+  background: #a1b0e6;
 }
 #user-profile-modal .header .actions button.disabled {
   border-radius: 10px 10px 0 0;
@@ -449,9 +449,7 @@
 }*/
 /* Message Wrapper */
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup,
-.chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup * {
-  font-family: Muli;
-}
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup *,
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-content .embed-content-inner *,
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-footer,
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-inner * {
