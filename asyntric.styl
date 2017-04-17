@@ -522,6 +522,8 @@ $textarea {
                     background: #282B30;
                     border: none;
                     & textarea {
+                        @extends $textarea;
+                        background: transparent !important;
                         font-family: Muli;
                     }
                     & .channel-textarea-upload {
