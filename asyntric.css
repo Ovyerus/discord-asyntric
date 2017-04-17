@@ -1,22 +1,27 @@
-.theme-dark .user-popout .body .notes .note textarea,
-.theme-dark .user-popout .footer .quick-message-wrapper .quick-message,
+@import url("https://fonts.googleapis.com/css?family=Comfortaa");
+@import url("https://fonts.googleapis.com/css?family=Muli");
+*:not(code):not(.hljs) {
+  font-family: Comfortaa;
+}
+.user-popout .body .notes .note textarea,
+.user-popout .footer .quick-message-wrapper .quick-message,
 #user-profile-modal .guilds .section .note textarea {
   color: rgba(255,255,255,0.5);
   transition: background 0.2s, color 0.2s;
 }
-.theme-dark .user-popout .body .notes .note textarea:focus,
-.theme-dark .user-popout .footer .quick-message-wrapper .quick-message:focus,
+.user-popout .body .notes .note textarea:focus,
+.user-popout .footer .quick-message-wrapper .quick-message:focus,
 #user-profile-modal .guilds .section .note textarea:focus {
   background: rgba(0,0,0,0.5);
   color: #fff;
 }
-.theme-dark .user-popout .body .notes .note textarea:focus::-webkit-input-placeholder,
-.theme-dark .user-popout .footer .quick-message-wrapper .quick-message:focus::-webkit-input-placeholder,
+.user-popout .body .notes .note textarea:focus::-webkit-input-placeholder,
+.user-popout .footer .quick-message-wrapper .quick-message:focus::-webkit-input-placeholder,
 #user-profile-modal .guilds .section .note textarea:focus::-webkit-input-placeholder {
   color: rgba(255,255,255,0.75);
 }
-.theme-dark .user-popout .body .notes .note textarea::-webkit-input-placeholder,
-.theme-dark .user-popout .footer .quick-message-wrapper .quick-message::-webkit-input-placeholder,
+.user-popout .body .notes .note textarea::-webkit-input-placeholder,
+.user-popout .footer .quick-message-wrapper .quick-message::-webkit-input-placeholder,
 #user-profile-modal .guilds .section .note textarea::-webkit-input-placeholder {
   color: rgba(255,255,255,0.5);
   transition: color 0.2s;
@@ -37,17 +42,17 @@
 .theme-dark .popout {
   box-shadow: none;
 }
-.theme-dark .user-popout {
+.user-popout {
   border-radius: 25px;
 }
-.theme-dark .user-popout .header,
-.theme-dark .user-popout .body,
-.theme-dark .user-popout .footer {
-  background: #2e2e2e;
+.user-popout .header,
+.user-popout .body,
+.user-popout .footer {
+  background: #39456d;
 }
-.theme-dark .user-popout .header .avatar-wrapper .avatar-popout {
+.user-popout .header .avatar-wrapper .avatar-popout {
   border: none;
-  background-color: #2e2e2e;
+  background-color: #39456d;
   width: 45px;
   height: 45px;
   background-size: 45px 45px;
@@ -55,7 +60,7 @@
   margin-top: -10px;
   transition: box-shadow 0.2s;
 }
-.theme-dark .user-popout .header .avatar-wrapper .avatar-popout .status {
+.user-popout .header .avatar-wrapper .avatar-popout .status {
   width: 45px;
   height: 45px;
   border-radius: 50px;
@@ -64,36 +69,36 @@
   top: -10px;
   background: transparent;
 }
-.theme-dark .user-popout .header .avatar-wrapper .avatar-popout .status.status-online {
+.user-popout .header .avatar-wrapper .avatar-popout .status.status-online {
   border: solid 3px #43b581;
 }
-.theme-dark .user-popout .header .avatar-wrapper .avatar-popout .status.status-idle {
+.user-popout .header .avatar-wrapper .avatar-popout .status.status-idle {
   border: solid 3px #faa61a;
 }
-.theme-dark .user-popout .header .avatar-wrapper .avatar-popout .status.status-dnd {
+.user-popout .header .avatar-wrapper .avatar-popout .status.status-dnd {
   border: solid 3px #f04747;
 }
-.theme-dark .user-popout .header .avatar-wrapper .avatar-popout .status.status-offline {
+.user-popout .header .avatar-wrapper .avatar-popout .status.status-offline {
   border: solid 3px #747f8d;
 }
-.theme-dark .user-popout .header .avatar-wrapper .avatar-popout:hover {
+.user-popout .header .avatar-wrapper .avatar-popout:hover {
   box-shadow: inset 0 0 25px 5px #212121;
 }
-.theme-dark .user-popout .header .avatar-wrapper .avatar-hint {
+.user-popout .header .avatar-wrapper .avatar-hint {
   display: none;
 }
-.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .discord-tag {
+.user-popout .header .username-wrapper:not(.has-nickname) .discord-tag {
   margin-top: -46px;
   text-align: left;
   padding-left: 69px;
 }
-.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .discord-tag .username {
+.user-popout .header .username-wrapper:not(.has-nickname) .discord-tag .username {
   color: #fff;
 }
-.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .discord-tag .discriminator {
+.user-popout .header .username-wrapper:not(.has-nickname) .discord-tag .discriminator {
   color: rgba(255,255,255,0.75);
 }
-.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .activity {
+.user-popout .header .username-wrapper:not(.has-nickname) .activity {
   text-align: left;
   margin-left: 12px;
   margin-right: 24px;
@@ -102,31 +107,31 @@
   letter-spacing: -8px;
   color: rgba(255,255,255,0.75);
 }
-.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .activity strong {
+.user-popout .header .username-wrapper:not(.has-nickname) .activity strong {
   visibility: visible;
   letter-spacing: 0px;
 }
-.theme-dark .user-popout .header .username-wrapper:not(.has-nickname) .activity strong::before {
+.user-popout .header .username-wrapper:not(.has-nickname) .activity strong::before {
   content: 'Playing - ';
 }
-.theme-dark .user-popout .header .username-wrapper.has-nickname .nickname {
+.user-popout .header .username-wrapper.has-nickname .nickname {
   margin-top: -53px;
   text-align: left;
   padding-left: 69px;
   color: #fff;
 }
-.theme-dark .user-popout .header .username-wrapper.has-nickname .discord-tag {
+.user-popout .header .username-wrapper.has-nickname .discord-tag {
   text-align: left;
   padding-left: 69px;
   margin-top: -10px;
 }
-.theme-dark .user-popout .header .username-wrapper.has-nickname .discord-tag .username {
+.user-popout .header .username-wrapper.has-nickname .discord-tag .username {
   color: rgba(255,255,255,0.75);
 }
-.theme-dark .user-popout .header .username-wrapper.has-nickname .discord-tag .discriminator {
+.user-popout .header .username-wrapper.has-nickname .discord-tag .discriminator {
   color: rgba(255,255,255,0.5);
 }
-.theme-dark .user-popout .header .username-wrapper.has-nickname .activity {
+.user-popout .header .username-wrapper.has-nickname .activity {
   text-align: left;
   margin-left: 12px;
   margin-right: 24px;
@@ -135,51 +140,51 @@
   letter-spacing: -8px;
   color: rgba(255,255,255,0.75);
 }
-.theme-dark .user-popout .header .username-wrapper.has-nickname .activity strong {
+.user-popout .header .username-wrapper.has-nickname .activity strong {
   visibility: visible;
   letter-spacing: 0px;
 }
-.theme-dark .user-popout .header .username-wrapper.has-nickname .activity strong::before {
+.user-popout .header .username-wrapper.has-nickname .activity strong::before {
   content: 'Playing - ';
 }
-.theme-dark .user-popout .body .notes .label {
+.user-popout .body .notes .label {
   color: #fff;
 }
-.theme-dark .user-popout .body .notes .label .icon {
+.user-popout .body .notes .label .icon {
   display: none;
 }
-.theme-dark .user-popout .body .roles .label {
+.user-popout .body .roles .label {
   color: #fff;
 }
-.theme-dark .user-popout .body .roles .label .icon {
+.user-popout .body .roles .label .icon {
   display: none;
 }
-.theme-dark .user-popout .body .roles .member-roles .member-role:not(.member-role-add) {
+.user-popout .body .roles .member-roles .member-role:not(.member-role-add) {
   background: #232323;
   border: none !important;
   border-radius: 50px;
   color: #fff;
 }
-.theme-dark .user-popout .body .roles .member-roles .member-role:not(.member-role-add) button {
+.user-popout .body .roles .member-roles .member-role:not(.member-role-add) button {
   filter: brightness(200%);
 }
-.theme-dark .user-popout .body .roles .member-roles .member-role.member-role-add {
+.user-popout .body .roles .member-roles .member-role.member-role-add {
   background: #232323;
   border: none;
   border-radius: 50px;
 }
-.theme-dark .user-popout .body .roles .member-roles .member-role.member-role-add button {
+.user-popout .body .roles .member-roles .member-role.member-role-add button {
   filter: brightness(200%);
 }
-.theme-dark .user-popout .footer {
+.user-popout .footer {
   border: none;
 }
-.theme-dark .user-popout .footer .quick-message-wrapper .quick-message {
+.user-popout .footer .quick-message-wrapper .quick-message {
   background: rgba(0,0,0,0.25);
   border: none;
   border-radius: 50px;
 }
-.theme-dark .user-popout .footer .update-notice {
+.user-popout .footer .update-notice {
   display: none;
 }
 /* Asyntric Badge */
@@ -410,4 +415,47 @@
 }
 #user-profile-modal .guilds::-webkit-scrollbar {
   display: none;
+}
+/* Settings */
+/*.ui-standard-sidebar-view {
+    & .content-region .scroller-wrap .scroller {
+        background: $col1;
+        & .user-settings-account {
+            & .flex-vertical .ui-card {
+                & .ui-flex {
+                    & .ui-flex-child:nth-child(2) {
+                        & h5 {
+                            color: #FFF;
+                        }
+                        & .ui-form-text {
+                            color: $white-lvl-1;
+                            & span {
+                                opacity: 1 !important;
+                                color: $white-lvl-2;
+                            }
+                        }
+                    }
+                }
+                border-radius: 100px;
+                background: $black-lvl-3;
+                & button {
+                    border-radius: 50px;
+                    margin-right: 28px;
+                    top: 54px;
+                }
+            }
+        }
+    }
+}*/
+/* Message Wrapper */
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup,
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup * {
+  font-family: Muli;
+}
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-content .embed-content-inner *,
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-footer {
+  font-family: Muli;
+}
+.chat .content div:nth-child(1) form .channel-textarea .channel-textarea-inner textarea {
+  font-family: Muli;
 }

@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
 // Variables
-$col1 = #2E2E2E;
+$dark-1 = #2E2E2E;
 $online = #43B581;
 $away = #FAA61A;
 $dnd = #F04747;
@@ -13,9 +16,16 @@ $black-lvl-1 = rgba(0, 0, 0, 0.75);
 $black-lvl-2 = rgba(0, 0, 0, 0.5);
 $black-lvl-3 = rgba(0, 0, 0, 0.25);
 $asyntric = #68217A;
+$blurple = #7289DA;
+$greyple = #99AAB5;
+$blurple-dark = #39456D;
 $verified-icon = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/checkbox-marked-circle-outline.svg");
 $link = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/link.svg");
 $menu-arrow = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/menu-down.svg");
+
+*:not(code):not(.hljs) {
+    font-family: Comfortaa;
+}
 
 $textarea {
     color: $white-lvl-2;
@@ -51,18 +61,18 @@ $textarea {
     box-shadow: none;
 }
 
-.theme-dark .user-popout {
+.user-popout {
     border-radius: 25px;
     & .header,
     & .body,
     & .footer {
-        background: $col1;
+        background: $blurple-dark;
     }
     & .header {
         & .avatar-wrapper  {
             & .avatar-popout {
                 border: none;
-                background-color: $col1;
+                background-color: $blurple-dark;
                 width: 45px;
                 height: 45px;
                 background-size: 45px 45px;
@@ -259,7 +269,7 @@ $textarea {
     & .scroller-wrap .guilds,
     & .empty,
     & .avatar-wrapper {
-        background: $col1;
+        background: $dark-1;
     }
     & .header {
         & .header-info {
@@ -462,6 +472,59 @@ $textarea {
         }
         &::-webkit-scrollbar {
             display: none;
+        }
+    }
+}
+
+/* Settings */
+/*.ui-standard-sidebar-view {
+    & .content-region .scroller-wrap .scroller {
+        background: $col1;
+        & .user-settings-account {
+            & .flex-vertical .ui-card {
+                & .ui-flex {
+                    & .ui-flex-child:nth-child(2) {
+                        & h5 {
+                            color: #FFF;
+                        }
+                        & .ui-form-text {
+                            color: $white-lvl-1;
+                            & span {
+                                opacity: 1 !important;
+                                color: $white-lvl-2;
+                            }
+                        }
+                    }
+                }
+                border-radius: 100px;
+                background: $black-lvl-3;
+                & button {
+                    border-radius: 50px;
+                    margin-right: 28px;
+                    top: 54px;
+                }
+            }
+        }
+    }
+}*/
+
+/* Message Wrapper */
+.chat {
+    & .content div:nth-child(1) {
+        & .messages-wrapper .messages {
+            & .message {
+                & .body .message-text .markup,
+                & .body .message-text .markup * {
+                    font-family: Muli;
+                }
+                & .accessory .embed-wrapper .embed-content .embed-content-inner *,
+                & .accessory .embed-wrapper .embed-footer {
+                    font-family: Muli;
+                }
+            }
+        }
+        & form .channel-textarea .channel-textarea-inner textarea {
+            font-family: Muli;
         }
     }
 }
