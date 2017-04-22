@@ -449,6 +449,15 @@
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number) {
   font-family: Muli;
 }
+.chat .content div:nth-child(1) .messages-wrapper .messages .message.first .timestamp {
+  float: right;
+  color: rgba(255,255,255,0.5);
+  background: url("https://cdn.rawgit.com/twitter/twemoji/gh-pages/svg/1f552.svg") no-repeat;
+}
+.chat .content div:nth-child(1) .messages-wrapper .messages .message.first .timestamp::before {
+  content: '🕐 ';
+  color: transparent;
+}
 .chat .content div:nth-child(1) .messages-wrapper .messages .edit-message .edit-container-outer .edit-container-inner .channel-textarea .channel-textarea-inner textarea {
   font-family: Muli;
 }
