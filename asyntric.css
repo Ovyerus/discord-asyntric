@@ -3,6 +3,14 @@
 *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number) {
   font-family: Comfortaa;
 }
+.emoji {
+  height: 24px;
+  width: 24px;
+}
+.emoji.jumboable {
+  height: 48px;
+  width: 48px;
+}
 .user-popout .body .notes .note textarea,
 .user-popout .footer .quick-message-wrapper .quick-message,
 #user-profile-modal .guilds .section .note textarea,
