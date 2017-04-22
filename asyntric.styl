@@ -23,7 +23,7 @@ $verified-icon = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/
 $link = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/link.svg");
 $menu-arrow = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/menu-down.svg");
 
-*:not(code):not(.hljs) {
+*:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number) {
     font-family: Comfortaa;
 }
 
@@ -502,11 +502,11 @@ $textarea {
         & .messages-wrapper .messages {
             & .message {
                 & .body .message-text .markup,
-                & .body .message-text .markup *,
-                & .accessory .embed-wrapper .embed-content .embed-content-inner *,
+                & .body .message-text .markup *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number),
+                & .accessory .embed-wrapper .embed-content .embed-content-inner *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number),
                 & .accessory .embed-wrapper .embed-footer,
-                & .accessory .embed-wrapper .embed-inner *,
-                & .accessory .embed-wrapper .embed * {
+                & .accessory .embed-wrapper .embed-inner *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number),
+                & .accessory .embed-wrapper .embed *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number) {
                     font-family: Muli;
                 }
             }
