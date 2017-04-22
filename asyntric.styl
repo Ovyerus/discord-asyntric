@@ -518,7 +518,8 @@ $textarea {
         & form {
             border: none;
             box-shadow: none;
-            margin: 7px 10px 15px;
+            margin: 0;
+            padding: 7px 10px 15px;
             & .channel-textarea {
                 margin-top: 10px;
                 margin-bottom: 0;
@@ -537,9 +538,15 @@ $textarea {
                 }
             }
             & .typing {
-                display: none;
+                //display: none;
                 position: absolute;
-                top: 0;
+                top: -5px;
+                & .ellipsis {
+                    display: none;
+                }
+                & .text {
+                    margin: auto;
+                }
             }
         }
     }

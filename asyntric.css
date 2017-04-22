@@ -454,7 +454,8 @@
 .chat .content div:nth-child(1) form {
   border: none;
   box-shadow: none;
-  margin: 7px 10px 15px;
+  margin: 0;
+  padding: 7px 10px 15px;
 }
 .chat .content div:nth-child(1) form .channel-textarea {
   margin-top: 10px;
@@ -473,7 +474,12 @@
   border: none;
 }
 .chat .content div:nth-child(1) form .typing {
-  display: none;
   position: absolute;
-  top: 0;
+  top: -5px;
+}
+.chat .content div:nth-child(1) form .typing .ellipsis {
+  display: none;
+}
+.chat .content div:nth-child(1) form .typing .text {
+  margin: auto;
 }
