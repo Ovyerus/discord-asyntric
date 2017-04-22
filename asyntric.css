@@ -175,6 +175,7 @@
   background: rgba(0,0,0,0.25);
   border: none;
   border-radius: 50px;
+  font-family: Muli;
 }
 .user-popout .footer .update-notice {
   display: none;
