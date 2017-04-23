@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Comfortaa");
-@import url("https://fonts.googleapis.com/css?family=Muli");
-*:not(code):not(.hljs *) {
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Inconsolata|Muli");
+* {
   font-family: Comfortaa;
+}
+code,
+pre,
+.hljs * {
+  font-family: Inconsolata !important;
 }
 .emoji {
   height: 24px;
@@ -450,11 +454,11 @@
 }*/
 /* Message Wrapper */
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup,
-.chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup *:not(code):not(.hljs *),
-.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-content .embed-content-inner *:not(code):not(.hljs *),
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup *,
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-content .embed-content-inner *,
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-footer,
-.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-inner *:not(code):not(.hljs *),
-.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed *:not(code):not(.hljs *) {
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-inner *,
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed * {
   font-family: Muli;
 }
 .chat .content div:nth-child(1) .messages-wrapper .messages .message.first .timestamp {

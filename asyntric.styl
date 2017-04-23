@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa');
-@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Inconsolata|Muli');
 
 // Variables
 $dark-1 = #2E2E2E;
@@ -22,10 +21,15 @@ $blurple-dark = #39456D;
 $verified-icon = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/checkbox-marked-circle-outline.svg");
 $link = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/link.svg");
 $menu-arrow = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/menu-down.svg");
-$mono-stack = ':not(code):not(.hljs *)';
 
-*{$mono-stack} {
+* {
     font-family: Comfortaa;
+}
+
+code,
+pre,
+.hljs * {
+    font-family: Inconsolata !important;
 }
 
 .emoji {
@@ -513,11 +517,11 @@ $textarea {
         & .messages-wrapper .messages {
             & .message {
                 & .body .message-text .markup,
-                & .body .message-text .markup *{$mono-stack},
-                & .accessory .embed-wrapper .embed-content .embed-content-inner *{$mono-stack},
+                & .body .message-text .markup *,
+                & .accessory .embed-wrapper .embed-content .embed-content-inner *,
                 & .accessory .embed-wrapper .embed-footer,
-                & .accessory .embed-wrapper .embed-inner *{$mono-stack},
-                & .accessory .embed-wrapper .embed *{$mono-stack} {
+                & .accessory .embed-wrapper .embed-inner *,
+                & .accessory .embed-wrapper .embed * {
                     font-family: Muli;
                 }
                 &.first .timestamp {
