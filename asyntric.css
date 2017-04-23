@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa");
 @import url("https://fonts.googleapis.com/css?family=Muli");
-*:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number) {
+*:not(code):not(.hljs *) {
   font-family: Comfortaa;
 }
 .emoji {
@@ -450,11 +450,11 @@
 }*/
 /* Message Wrapper */
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup,
-.chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number),
-.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-content .embed-content-inner *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number),
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup *:not(code):not(.hljs *),
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-content .embed-content-inner *:not(code):not(.hljs *),
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-footer,
-.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-inner *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number),
-.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number) {
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed-inner *:not(code):not(.hljs *),
+.chat .content div:nth-child(1) .messages-wrapper .messages .message .accessory .embed-wrapper .embed *:not(code):not(.hljs *) {
   font-family: Muli;
 }
 .chat .content div:nth-child(1) .messages-wrapper .messages .message.first .timestamp {

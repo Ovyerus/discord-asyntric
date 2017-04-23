@@ -22,8 +22,9 @@ $blurple-dark = #39456D;
 $verified-icon = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/checkbox-marked-circle-outline.svg");
 $link = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/link.svg");
 $menu-arrow = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/menu-down.svg");
+$mono-stack = ':not(code):not(.hljs *)';
 
-*:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number) {
+*{$mono-stack} {
     font-family: Comfortaa;
 }
 
@@ -512,11 +513,11 @@ $textarea {
         & .messages-wrapper .messages {
             & .message {
                 & .body .message-text .markup,
-                & .body .message-text .markup *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number),
-                & .accessory .embed-wrapper .embed-content .embed-content-inner *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number),
+                & .body .message-text .markup *{$mono-stack},
+                & .accessory .embed-wrapper .embed-content .embed-content-inner *{$mono-stack},
                 & .accessory .embed-wrapper .embed-footer,
-                & .accessory .embed-wrapper .embed-inner *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number),
-                & .accessory .embed-wrapper .embed *:not(code):not(.hljs):not(.hljs-symbol):not(.hljs-number) {
+                & .accessory .embed-wrapper .embed-inner *{$mono-stack},
+                & .accessory .embed-wrapper .embed *{$mono-stack} {
                     font-family: Muli;
                 }
                 &.first .timestamp {
