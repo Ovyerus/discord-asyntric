@@ -203,37 +203,6 @@ pre,
 .user-popout .footer .update-notice {
   display: none;
 }
-/* Asyntric Badge */
-.avatar-large[style*="99742488666845184"] + .comment .message.first .body .username-wrapper:after {
-  content: 'Asyntric';
-  color: #fff;
-  margin-left: 5px;
-  background: #68217a;
-  line-height: 16px;
-  text-transform: uppercase;
-  vertical-align: bottom;
-  border-radius: 3px;
-  margin-left: 6px;
-  padding: 1px 2px;
-  font-size: 10px;
-  font-weight: 600;
-  cursor: text;
-}
-.member.member-status > .avatar-small[style*="99742488666845184"] + .member-inner .member-username:after {
-  content: 'Asyntric';
-  color: #fff;
-  margin-left: 5px;
-  background: #68217a;
-  line-height: 15px;
-  height: 14px;
-  text-transform: uppercase;
-  vertical-align: bottom;
-  border-radius: 3px;
-  margin-left: 6px;
-  padding: 1px 2px;
-  font-size: 10px;
-  font-weight: 600;
-}
 /* Profile Modal */
 #user-profile-modal {
   border-radius: 50px;
