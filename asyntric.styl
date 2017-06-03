@@ -8,6 +8,7 @@ $dnd = #F04747;
 $invis = #747F8D;
 $blue = #4087ED;
 $blue-hover = #609BF0;
+$red = #ed3f3f;
 $white-lvl-1 = rgba(255, 255, 255, 0.75);
 $white-lvl-2 = rgba(255, 255, 255, 0.5);
 $white-lvl-3 = rgba(255, 255, 255, 0.25);
@@ -22,8 +23,17 @@ $verified-icon = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/
 $link = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/link.svg");
 $menu-arrow = url("https://cdn.rawgit.com/Templarian/MaterialDesign/423bb328/icons/svg/menu-down.svg");
 
-* {
+*,
+h2 {
     font-family: Comfortaa;
+}
+
+h5 {
+    font-family: Comfortaa !important
+}
+
+button {
+    font-family: Muli;
 }
 
 code,
@@ -480,12 +490,27 @@ $textarea {
 }
 
 /* Settings */
-/*.ui-standard-sidebar-view {
+.ui-standard-sidebar-view {
     & .content-region .scroller-wrap .scroller {
-        background: $col1;
+        background: linear-gradient(-110deg, #48227d 0%, #2f569c 100%);
         & .user-settings-account {
             & .flex-vertical .ui-card {
-                & .ui-flex {
+                border-radius: 100px;
+                background: $black-lvl-3;
+                border: solid 2px $black-lvl-3;
+                & button {
+                    border-radius: 50px;
+                    background-color: $blue;
+                    transition: background-color 0.2s;
+                    &:hover {
+                        background-color: $blue-hover;
+                    }
+                }
+                & .ui-flex ~ button {
+                    margin-right: 28px;
+                    top: 54px;
+                }
+                & .ui-flex:nth-child(1) {
                     & .ui-flex-child:nth-child(2) {
                         & h5 {
                             color: #FFF;
@@ -499,17 +524,74 @@ $textarea {
                         }
                     }
                 }
-                border-radius: 100px;
-                background: $black-lvl-3;
-                & button {
-                    border-radius: 50px;
-                    margin-right: 28px;
-                    top: 54px;
+                &.user-info-editing {
+                    border-radius: 70px;
+                    & .ui-flex:nth-child(1) {
+                        & .ui-flex-child:nth-child(2) {
+                            & input {
+                                @extends $textarea;
+                                border: none;
+                                border-radius: 50px;
+                                font-family: Muli;
+                            }
+                            & button {
+                                height: 32px;
+                                padding: 2px 16px;
+                                top: 32px;
+                                & .ui-button-contents {
+                                    background-image: none;
+                                }
+                            }
+                        }
+                    }
+                    & .ui-form-divider {
+                        display: none;
+                    }
+                    & .ui-flex:nth-child(3) {
+                        margin-right: 45px;
+                        & .ui-flex-child:nth-child(1) div button {
+                            background-color: transparent;
+                            border: solid 2px $red;
+                            font-weight: bold;
+                            color: $red;
+                            height: 32px;
+                            padding: 2px 16px;
+                            transition: background-color 0.2s, color 0.2s;
+                            &:hover {
+                                background-color: $red;
+                                color: #FFF;
+                            }
+                            & .ui-button-contents {
+                                background-image: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .user-settings-security div .ui-form-section .ui-flex {
+            & button {
+                border-radius: 50px;
+                background-color: $blue;
+                transition: background-color 0.2s;
+                &:hover {
+                    background-color: $blue-hover;
+                }
+            }
+            & .ui-flex-child:nth-child(2) button {
+                background-color: transparent;
+                border: solid 2px $red;
+                font-weight: bold;
+                color: $red;
+                transition: background-color 0.2s, color 0.2s;
+                &:hover {
+                    background-color: $red;
+                    color: #FFF;
                 }
             }
         }
     }
-}*/
+}
 
 /* Message Wrapper */
 .chat {

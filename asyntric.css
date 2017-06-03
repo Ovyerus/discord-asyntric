@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Inconsolata|Muli");
-* {
+*,
+h2 {
   font-family: Comfortaa;
+}
+h5 {
+  font-family: Comfortaa !important;
+}
+button {
+  font-family: Muli;
 }
 code,
 pre,
@@ -18,6 +25,7 @@ pre,
 .user-popout .body .notes .note textarea,
 .user-popout .footer .quick-message-wrapper .quick-message,
 #user-profile-modal .guilds .section .note textarea,
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-flex:nth-child(1) .ui-flex-child:nth-child(2) input,
 .chat .content div:nth-child(1) form .channel-textarea .channel-textarea-inner textarea {
   color: rgba(255,255,255,0.5);
   transition: background 0.2s, color 0.2s;
@@ -25,6 +33,7 @@ pre,
 .user-popout .body .notes .note textarea:focus,
 .user-popout .footer .quick-message-wrapper .quick-message:focus,
 #user-profile-modal .guilds .section .note textarea:focus,
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-flex:nth-child(1) .ui-flex-child:nth-child(2) input:focus,
 .chat .content div:nth-child(1) form .channel-textarea .channel-textarea-inner textarea:focus {
   background: rgba(0,0,0,0.5);
   color: #fff;
@@ -32,12 +41,14 @@ pre,
 .user-popout .body .notes .note textarea:focus::-webkit-input-placeholder,
 .user-popout .footer .quick-message-wrapper .quick-message:focus::-webkit-input-placeholder,
 #user-profile-modal .guilds .section .note textarea:focus::-webkit-input-placeholder,
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-flex:nth-child(1) .ui-flex-child:nth-child(2) input:focus::-webkit-input-placeholder,
 .chat .content div:nth-child(1) form .channel-textarea .channel-textarea-inner textarea:focus::-webkit-input-placeholder {
   color: rgba(255,255,255,0.75);
 }
 .user-popout .body .notes .note textarea::-webkit-input-placeholder,
 .user-popout .footer .quick-message-wrapper .quick-message::-webkit-input-placeholder,
 #user-profile-modal .guilds .section .note textarea::-webkit-input-placeholder,
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-flex:nth-child(1) .ui-flex-child:nth-child(2) input::-webkit-input-placeholder,
 .chat .content div:nth-child(1) form .channel-textarea .channel-textarea-inner textarea::-webkit-input-placeholder {
   color: rgba(255,255,255,0.5);
   transition: color 0.2s;
@@ -422,36 +433,93 @@ pre,
   display: none;
 }
 /* Settings */
-/*.ui-standard-sidebar-view {
-    & .content-region .scroller-wrap .scroller {
-        background: $col1;
-        & .user-settings-account {
-            & .flex-vertical .ui-card {
-                & .ui-flex {
-                    & .ui-flex-child:nth-child(2) {
-                        & h5 {
-                            color: #FFF;
-                        }
-                        & .ui-form-text {
-                            color: $white-lvl-1;
-                            & span {
-                                opacity: 1 !important;
-                                color: $white-lvl-2;
-                            }
-                        }
-                    }
-                }
-                border-radius: 100px;
-                background: $black-lvl-3;
-                & button {
-                    border-radius: 50px;
-                    margin-right: 28px;
-                    top: 54px;
-                }
-            }
-        }
-    }
-}*/
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller {
+  background: linear-gradient(-110deg, #48227d 0%, #2f569c 100%);
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card {
+  border-radius: 100px;
+  background: rgba(0,0,0,0.25);
+  border: solid 2px rgba(0,0,0,0.25);
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card button {
+  border-radius: 50px;
+  background-color: #4087ed;
+  transition: background-color 0.2s;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card button:hover {
+  background-color: #609bf0;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card .ui-flex ~ button {
+  margin-right: 28px;
+  top: 54px;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card .ui-flex:nth-child(1) .ui-flex-child:nth-child(2) h5 {
+  color: #fff;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card .ui-flex:nth-child(1) .ui-flex-child:nth-child(2) .ui-form-text {
+  color: rgba(255,255,255,0.75);
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card .ui-flex:nth-child(1) .ui-flex-child:nth-child(2) .ui-form-text span {
+  opacity: 1 !important;
+  color: rgba(255,255,255,0.5);
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing {
+  border-radius: 70px;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-flex:nth-child(1) .ui-flex-child:nth-child(2) input {
+  border: none;
+  border-radius: 50px;
+  font-family: Muli;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-flex:nth-child(1) .ui-flex-child:nth-child(2) button {
+  height: 32px;
+  padding: 2px 16px;
+  top: 32px;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-flex:nth-child(1) .ui-flex-child:nth-child(2) button .ui-button-contents {
+  background-image: none;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-form-divider {
+  display: none;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-flex:nth-child(3) {
+  margin-right: 45px;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-flex:nth-child(3) .ui-flex-child:nth-child(1) div button {
+  background-color: transparent;
+  border: solid 2px #ed3f3f;
+  font-weight: bold;
+  color: #ed3f3f;
+  height: 32px;
+  padding: 2px 16px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-flex:nth-child(3) .ui-flex-child:nth-child(1) div button:hover {
+  background-color: #ed3f3f;
+  color: #fff;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-account .flex-vertical .ui-card.user-info-editing .ui-flex:nth-child(3) .ui-flex-child:nth-child(1) div button .ui-button-contents {
+  background-image: none;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-security div .ui-form-section .ui-flex button {
+  border-radius: 50px;
+  background-color: #4087ed;
+  transition: background-color 0.2s;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-security div .ui-form-section .ui-flex button:hover {
+  background-color: #609bf0;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-security div .ui-form-section .ui-flex .ui-flex-child:nth-child(2) button {
+  background-color: transparent;
+  border: solid 2px #ed3f3f;
+  font-weight: bold;
+  color: #ed3f3f;
+  transition: background-color 0.2s, color 0.2s;
+}
+.ui-standard-sidebar-view .content-region .scroller-wrap .scroller .user-settings-security div .ui-form-section .ui-flex .ui-flex-child:nth-child(2) button:hover {
+  background-color: #ed3f3f;
+  color: #fff;
+}
 /* Message Wrapper */
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup,
 .chat .content div:nth-child(1) .messages-wrapper .messages .message .body .message-text .markup *,
