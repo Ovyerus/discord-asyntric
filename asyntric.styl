@@ -240,39 +240,6 @@ $textarea {
     }
 }
 
-/* Asyntric Badge */
-.avatar-large[style*="99742488666845184"] + .comment .message.first .body .username-wrapper:after {
-	content: 'Asyntric';
-	color: white;
-	margin-left: 5px;
-	background: $asyntric;
-    line-height: 16px;
-    text-transform: uppercase;
-    vertical-align: bottom;
-    border-radius: 3px;
-    margin-left: 6px;
-    padding: 1px 2px;
-    font-size: 10px;
-    font-weight: 600;
-    cursor: text;
-}
-
-.member.member-status > .avatar-small[style*="99742488666845184"] + .member-inner .member-username:after {
-	content: 'Asyntric';
-	color: white;
-	margin-left: 5px;
-	background: $asyntric;
-    line-height: 15px;
-    height: 14px;
-    text-transform: uppercase;
-    vertical-align: bottom;
-    border-radius: 3px;
-    margin-left: 6px;
-    padding: 1px 2px;
-    font-size: 10px;
-    font-weight: 600;
-}
-
 /* Profile Modal */
 #user-profile-modal {
     border-radius: 50px;
@@ -489,110 +456,6 @@ $textarea {
     }
 }
 
-/* Settings */
-.ui-standard-sidebar-view {
-    & .content-region .scroller-wrap .scroller {
-        background: linear-gradient(-110deg, #48227d 0%, #2f569c 100%);
-        & .user-settings-account {
-            & .flex-vertical .ui-card {
-                border-radius: 100px;
-                background: $black-lvl-3;
-                border: solid 2px $black-lvl-3;
-                & button {
-                    border-radius: 50px;
-                    background-color: $blue;
-                    transition: background-color 0.2s;
-                    &:hover {
-                        background-color: $blue-hover;
-                    }
-                }
-                & .ui-flex ~ button {
-                    margin-right: 28px;
-                    top: 54px;
-                }
-                & .ui-flex:nth-child(1) {
-                    & .ui-flex-child:nth-child(2) {
-                        & h5 {
-                            color: #FFF;
-                        }
-                        & .ui-form-text {
-                            color: $white-lvl-1;
-                            & span {
-                                opacity: 1 !important;
-                                color: $white-lvl-2;
-                            }
-                        }
-                    }
-                }
-                &.user-info-editing {
-                    border-radius: 70px;
-                    & .ui-flex:nth-child(1) {
-                        & .ui-flex-child:nth-child(2) {
-                            & input {
-                                @extends $textarea;
-                                border: none;
-                                border-radius: 50px;
-                                font-family: Muli;
-                            }
-                            & button {
-                                height: 32px;
-                                padding: 2px 16px;
-                                top: 32px;
-                                & .ui-button-contents {
-                                    background-image: none;
-                                }
-                            }
-                        }
-                    }
-                    & .ui-form-divider {
-                        display: none;
-                    }
-                    & .ui-flex:nth-child(3) {
-                        margin-right: 45px;
-                        & .ui-flex-child:nth-child(1) div button {
-                            background-color: transparent;
-                            border: solid 2px $red;
-                            font-weight: bold;
-                            color: $red;
-                            height: 32px;
-                            padding: 2px 16px;
-                            transition: background-color 0.2s, color 0.2s;
-                            &:hover {
-                                background-color: $red;
-                                color: #FFF;
-                            }
-                            & .ui-button-contents {
-                                background-image: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        & .user-settings-security div .ui-form-section .ui-flex {
-            & button {
-                border-radius: 50px;
-                background-color: $blue;
-                transition: background-color 0.2s;
-                &:hover {
-                    background-color: $blue-hover;
-                }
-            }
-            & .ui-flex-child:nth-child(2) button {
-                background-color: transparent;
-                border: solid 2px $red;
-                font-weight: bold;
-                color: $red;
-                transition: background-color 0.2s, color 0.2s;
-                &:hover {
-                    background-color: $red;
-                    color: #FFF;
-                }
-            }
-        }
-    }
-}
-
 /* Message Wrapper */
 .chat {
     & .content div:nth-child(1) {
@@ -620,40 +483,6 @@ $textarea {
             & .edit-message {
                 & .edit-container-outer .edit-container-inner .channel-textarea .channel-textarea-inner textarea {
                     font-family: Muli;
-                }
-            }
-        }
-        & form {
-            border: none;
-            box-shadow: none;
-            margin: 0;
-            padding: 7px 10px 15px;
-            & .channel-textarea {
-                margin-top: 10px;
-                margin-bottom: 0;
-                & .channel-textarea-inner {
-                    border-radius: 50px;
-                    background: #282B30;
-                    border: none;
-                    & textarea {
-                        @extends $textarea;
-                        background: transparent !important;
-                        font-family: Muli;
-                    }
-                    & .channel-textarea-upload {
-                        border: none;
-                    }
-                }
-            }
-            & .typing {
-                //display: none;
-                position: absolute;
-                top: -5px;
-                & .ellipsis {
-                    display: none;
-                }
-                & .text {
-                    margin: auto;
                 }
             }
         }
